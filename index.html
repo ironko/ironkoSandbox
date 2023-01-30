@@ -33,9 +33,11 @@
 // 이벤트 코드
 
 <script type="text/javascript">
+    var track_id = document.getElementBiId('TrackId');
+
       function Pageview_click() {
       alert("방문을 누르셨습니다.");
-      kakaoPixel('6141657146100435130').pageView();
+      kakaoPixel(track_id.value).pageView();
 }
 
       function CompleteRegistration_click() {
