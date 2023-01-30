@@ -1,15 +1,24 @@
-<h2>Last Update: 2023-01-30 21:10</h2>
+<h2>Last Update: 2023-01-30 21:40</h2>
+
+
+<input type="text" name="TrackId" value="6141657146100435130">
+<p><p>
 
 <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/kas/static/kp.dev.min.js"></script>
 <script type="text/javascript">
-      kakaoPixel('6141657146100435130').pageView('testpageview');
+      kakaoPixel('{TrackId}').pageView('testpageview');
 </script>
-
-방문(PageView) Completed
 
 
 <p><p>
 
+방문(PageView) Completed
+
+// 버튼처리
+
+<p><p>
+
+<input type="button" id="Pageview" onclick="Pageview_click();" value="방문" /><p><p>
 <input type="button" id="CompleteRegistration" onclick="CompleteRegistration_click();" value="회원가입" /><p><p>
 <input type="button" id="Search" onclick="Search_click();" value="검색" /><p><p>
 <input type="button" id="CompleteRegistration" onclick="ViewContent_click();" value="콘텐츠/상품 조회" /><p><p>
@@ -19,11 +28,16 @@
 <input type="button" id="Purchase" onclick="Purchase_click();" value="구매" /><p><p>
 <input type="button" id="Participation" onclick="Participation_click();" value="잠재고객" /><p><p>
 <input type="button" id="SignUp" onclick="SignUp_click();" value="서비스신청" /><p><p><p><p>
-
 <input type="button" id="All" onclick="All_click();" value="전체 이벤트 발생" /><p><p>
 
+// 이벤트 코드
 
 <script type="text/javascript">
+      function Pageview_click() {
+      alert("방문을 누르셨습니다.");
+      kakaoPixel('6141657146100435130').pageView();
+}
+
       function CompleteRegistration_click() {
       alert("회원가입을 누르셨습니다.");
       kakaoPixel('6141657146100435130').pageView();
