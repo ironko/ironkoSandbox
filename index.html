@@ -1,3 +1,5 @@
+<h2>Last Update: 2023-01-30 20:45
+
 <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/kas/static/kp.dev.min.js"></script>
 <script type="text/javascript">
       kakaoPixel('6141657146100435130').pageView('testpageview');
@@ -17,9 +19,6 @@
 <input type="button" id="Purchase" onclick="Purchase_click();" value="구매" /><p><p>
 <input type="button" id="Participation" onclick="Participation_click();" value="잠재고객" /><p><p>
 <input type="button" id="SignUp" onclick="SignUp_click();" value="서비스신청" /><p><p>
-<input type="button" id="AppLaunch" onclick="AppLaunch_click();" value="앱실행" /><p><p>
-<input type="button" id="InAppPurchase" onclick="InAppPurchase_click();" value="구매:마켓제공값" /><p><p>
-<input type="button" id="AppInstall" onclick="AppInstall_click();" value="설치:마켓제공값" /><p><p>
 
 
 
@@ -33,74 +32,68 @@
       function Search_click() {
       alert("검색을 누르셨습니다.");
       kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
+      kakaoPixel('6141657146100435130').search({
+        keyword: '아이폰'
+      });
 }
 
       function ViewContent_click() {
       alert("콘텐츠/상품 조회을 누르셨습니다.");
       kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
+      kakaoPixel('6141657146100435130').viewContent({
+        id: 'product01'
 }
 
 
       function AddToCart_click() {
       alert("장바구니추가을 누르셨습니다.");
-      kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
+      kakaoPixel('6141657146100435130').addToCart({
+        id: 'product01'
+      });
 }
 
 
       function AddToWishList_click() {
       alert("관심상품추가을 누르셨습니다.");
-      kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
+      kakaoPixel('6141657146100435130').addToWishList({
+        id: 'product01'
+      });
 }
 
 
       function ViewCart_click() {
       alert("장바구니 보기을 누르셨습니다.");
       kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
+      kakaoPixel('6141657146100435130').viewCart();
 }
 
 
       function Purchase_click() {
       alert("구매을 누르셨습니다.");
       kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
+      kakaoPixel('6141657146100435130').purchase({
+        total_quantity: "3", // 주문 내 상품 개수(optional)
+        total_price: "50000",  // 주문 총 가격(optional)
+        currency: "KRW",     // 주문 가격의 화폐 단위(optional, 기본 값은 KRW)
+        products: [          // 주문 내 상품 정보(optional)
+            { id: "product01", name: "title01", quantity: "2", price: "20000"},
+            { id: "product02", name: "title02", quantity: "1", price: "10000"}
+        ]
+    });
+
 }
 
 
       function Participation_click() {
       alert("잠재고객을 누르셨습니다.");
       kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
+      kakaoPixel('6141657146100435130').participation();
 }
 
       function SignUp_click() {
       alert("서비스신청을 누르셨습니다.");
       kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
+      kakaoPixel('6141657146100435130').signUp();
 }
 
-
-      function AppLaunch_click() {
-      alert("앱실행을 누르셨습니다.");
-      kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
-}
-
-
-      function InAppPurchase_click() {
-      alert("구매:마켓제공값을 누르셨습니다.");
-      kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
-}
-
-
-      function AppInstall_click() {
-      alert("설치:마켓제공값을 누르셨습니다.");
-      kakaoPixel('6141657146100435130').pageView();
-      kakaoPixel('6141657146100435130').completeRegistration();
-}
 </script>
