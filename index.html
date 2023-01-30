@@ -1,4 +1,4 @@
-<h2>Last Update: 2023-01-30 21:40</h2>
+<h2>Last Update: 2023-01-30 21:50</h2>
 
 
 <input type="text" name="TrackId" value="6141657146100435130">
@@ -14,8 +14,6 @@
 
 방문(PageView) Completed
 
-// 버튼처리
-
 <p><p>
 
 <input type="button" id="Pageview" onclick="Pageview_click();" value="방문" /><p><p>
@@ -30,10 +28,10 @@
 <input type="button" id="SignUp" onclick="SignUp_click();" value="서비스신청" /><p><p><p><p>
 <input type="button" id="All" onclick="All_click();" value="전체 이벤트 발생" /><p><p>
 
-// 이벤트 코드
-
+<p><p>
+    
 <script type="text/javascript">
-    var track_id = document.getElementBiId('TrackId');
+    var track_id = document.getElementById('TrackId');
 
       function Pageview_click() {
       alert("방문을 누르셨습니다.");
