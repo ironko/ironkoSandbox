@@ -18,8 +18,9 @@
 <input type="button" id="ViewCart" onclick="ViewCart_click();" value="장바구니 보기" /><p><p>
 <input type="button" id="Purchase" onclick="Purchase_click();" value="구매" /><p><p>
 <input type="button" id="Participation" onclick="Participation_click();" value="잠재고객" /><p><p>
-<input type="button" id="SignUp" onclick="SignUp_click();" value="서비스신청" /><p><p>
+<input type="button" id="SignUp" onclick="SignUp_click();" value="서비스신청" /><p><p><p><p>
 
+<input type="button" id="All" onclick="All_click();" value="전체 이벤트 발생" /><p><p>
 
 
 <script type="text/javascript">
@@ -95,5 +96,38 @@
       kakaoPixel('6141657146100435130').pageView();
       kakaoPixel('6141657146100435130').signUp();
 }
+
+
+---------
+     function All_click() {
+      alert("전체 이벤트 발생을 누르셨습니다.");
+      kakaoPixel('6141657146100435130').pageView();
+      kakaoPixel('6141657146100435130').completeRegistration();
+      kakaoPixel('6141657146100435130').search({
+        keyword: '아이폰'
+      });
+      kakaoPixel('6141657146100435130').viewContent({
+        id: 'product01'
+      });
+      kakaoPixel('6141657146100435130').addToCart({
+        id: 'product01'
+      });
+      kakaoPixel('6141657146100435130').addToWishList({
+        id: 'product01'
+      });
+      kakaoPixel('6141657146100435130').viewCart();
+      kakaoPixel('6141657146100435130').purchase({
+        total_quantity: "3", // 주문 내 상품 개수(optional)
+        total_price: "50000",  // 주문 총 가격(optional)
+        currency: "KRW",     // 주문 가격의 화폐 단위(optional, 기본 값은 KRW)
+        products: [          // 주문 내 상품 정보(optional)
+            { id: "product01", name: "title01", quantity: "2", price: "20000"},
+            { id: "product02", name: "title02", quantity: "1", price: "10000"}
+        ]
+    });
+      kakaoPixel('6141657146100435130').participation();
+      kakaoPixel('6141657146100435130').signUp();
+}
+
 
 </script>
