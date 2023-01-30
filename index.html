@@ -1,12 +1,12 @@
 <h2>Last Update: 2023-01-30 21:50</h2>
 
 
-<input type="text" name="TrackId" value="6141657146100435130">
+<input type="text" name="TrackId" id="TrackId" value="6141657146100435130" onchange="TrackIdValueChange()" >
 <p><p>
 
 <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/kas/static/kp.dev.min.js"></script>
 <script type="text/javascript">
-      kakaoPixel('{TrackId}').pageView('testpageview');
+      kakaoPixel('6141657146100435130').pageView('testpageview');
 </script>
 
 
@@ -31,11 +31,14 @@
 <p><p>
     
 <script type="text/javascript">
-    var track_id = document.getElementById('TrackId');
+        function TrackIdValueChange(){
+        var TrackId = document.getElementById('TrackId').value;
+        console.log(TrackId)
+}
 
       function Pageview_click() {
       alert("방문을 누르셨습니다.");
-      kakaoPixel(track_id.value).pageView();
+      kakaoPixel(TrackId.value).pageView();
 }
 
       function CompleteRegistration_click() {
