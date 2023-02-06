@@ -1,15 +1,22 @@
-<h2>Last Update: 2023-01-30 22:20</h2>
+<h2>Last Update: 2023-02-06 21:20</h2>
 
 <h2>Sandbox 기준</h2>
+    Phase: <br><input type="radio" id="Phase" name="Phase" value="Sandbox" onchange="PhaseValueChange()" checked><p>
+    Phase: <br><input type="radio" id="Phase" name="Phase" value="Production" onchange="PhaseValueChange()" ><p>
 
-
-    Track Id: <br><input type="text" name="TrackId" id="TrackId" value="6141657146100435130" size=50 onchange="TrackIdValueChange()" ><p>
+    Track Id: <br><input type="text" id="TrackId" name="TrackId" value="6141657146100435130" size=50 onchange="TrackIdValueChange()" ><p>
 
     iron.ko: 6141657146100435130
 
 <p><p>
 
-<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/kas/static/kp.dev.min.js"></script>
+
+
+{% if Phase.value == "Sandbox" %}
+    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/kas/static/kp.dev.min.js"></script>  
+{% else %}
+    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/kas/static/kp.dev.min.js"></script>  
+{% endif %}
 <script type="text/javascript">
       kakaoPixel(TrackId.value).pageView('testpageview');
 </script>
@@ -37,6 +44,11 @@
 <p><p>
     
 <script type="text/javascript">
+        function PhaseValueChange(){
+        var Phase = document.getElementById('Phase').value;
+        console.log(Phase)
+}
+
         function TrackIdValueChange(){
         var TrackId = document.getElementById('TrackId').value;
         console.log(TrackId)
