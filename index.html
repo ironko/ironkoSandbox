@@ -17,6 +17,7 @@
 {% else %}
     <src="//t1.daumcdn.net/kas/static/kp.dev.min.js">Production
 {% endif %}
+
       kakaoPixel(TrackId.value).pageView('testpageview');
 </script>
 
@@ -46,6 +47,7 @@
         function PhaseValueChange(){
         var Phase = document.getElementById('Phase').value;
         console.log(Phase)
+        window.Print(Phase.value)
 }
 
         function TrackIdValueChange(){
