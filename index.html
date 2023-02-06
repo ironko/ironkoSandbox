@@ -1,8 +1,8 @@
 <h2>Last Update: 2023-02-06 21:40</h2>
 
 <h2>Phase</h2>
-    <br><input type="radio" id="Sandbox" name="Phase" value="Sandbox" onchange="PhaseValueChange()" checked>Sandbox
-    <br><input type="radio" id="Production" name="Phase" value="Production" onchange="PhaseValueChange()" >Production<p>
+    <br><input type="radio" id="Phase" name="Phase" value="Sandbox" onchange="PhaseValueChange()" checked>Sandbox
+    <br><input type="radio" id="Phase" name="Phase" value="Production" onchange="PhaseValueChange()" >Production<p>
 
     Track Id: <br><input type="text" id="TrackId" name="TrackId" value="6141657146100435130" size=50 onchange="TrackIdValueChange()" ><p>
 
@@ -11,11 +11,11 @@
 <p><p>
 
 
-<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/kas/static/kp.dev.min.js">
+<script type="text/javascript" charset="UTF-8">
 {% if Phase.id == "Sandbox" %}
-    Sandbox
+    Sandbox<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/kas/static/kp.dev.min.js">
 {% else %}
-    Production
+    Production<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/kas/static/kp.dev.min.js">
 {% endif %}
       kakaoPixel(TrackId.value).pageView('testpageview');
 </script>
